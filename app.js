@@ -22,7 +22,7 @@ app.get('/api/testimonials',function(req,res){
               });
 });
 app.get('*', function(req, res) {
-  res.sendFile(index.html);
+  res.sendFile('index.html');
  });
 
 // Connecting with server
