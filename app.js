@@ -17,7 +17,7 @@ app.get('/api/', (req, res) => {
   });
  
 //getting data from db
-app.get('/api/testimonials',function(req,res){   
+app.get('/testimonials',function(req,res){   
   TestimonialData.find()
               .then(function(testimonial){
                   res.send(testimonial);
