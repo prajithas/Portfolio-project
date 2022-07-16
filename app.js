@@ -7,10 +7,10 @@ var app = new express();
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-const root = path.join(__dirname, 'client', 'build');
+
 app.use(express.static('./dist/Frontend'));
 app.get("*", (req, res) => {
-  res.sendFile('index.html', { root });
+  res.sendFile('index.html');
 });
 // Backend root
 app.get('/api/', (req, res) => {
