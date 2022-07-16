@@ -21,6 +21,6 @@ app.get('/api/testimonials',function(req,res){
 });
 app.use(express.static('./dist/Frontend'));
 // Connecting with server
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('listening to port 3000');
 });
