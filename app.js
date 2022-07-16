@@ -21,7 +21,7 @@ app.get('/api/testimonials',function(req,res){
                   res.send(testimonial);
               });
 });
-app.get('/*', function(req, res) {
+app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/frontend/index.html'));
  });
 
