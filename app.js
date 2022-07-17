@@ -13,12 +13,12 @@ app.get('*', function(req, res) {
  });
 
 // Backend root
-app.get('/', (req, res) => {
+app.get('/api/', (req, res) => {
     res.send('hello world')
   });
  
 //getting data from db
-app.get('/testimonials',function(req,res){   
+app.get('/api/testimonials',function(req,res){   
   TestimonialData.find()
               .then(function(testimonial){
                   res.send(testimonial);
