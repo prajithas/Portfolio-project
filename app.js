@@ -14,11 +14,11 @@ app.get('/api/', (req, res) => {
   });
  
 //getting data from db
-app.get('/api/testimonials',function(req,res){   
+app.get('/api/testimonials/',function(req,res){   
   TestimonialData.find()
               .then(function(testimonial){
                   res.send(testimonial);
-              });
+              }).error(console.log('No contents'));
 });
 app.get('*', function(req, res) {
   res.sendFile('./dist/frontend/index.html');
