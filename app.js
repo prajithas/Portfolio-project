@@ -6,7 +6,7 @@ var app = new express();
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(express.static('./dist/frontend>'));
+app.use(express.static('./dist/frontend'));
 
 // Backend root
 app.get('/api/', (req, res) => {
