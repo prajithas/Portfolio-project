@@ -21,7 +21,7 @@ app.get('/api/testimonials',function(req,res){
               });
 });
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname + './dist/frontend/index.html'));
+  res.sendFile('./dist/frontend/index.html');
  });
 // Connecting with server
 app.listen((process.env.PORT || 5000), function(){
