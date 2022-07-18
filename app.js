@@ -18,7 +18,8 @@ app.get('/api/testimonials/',function(req,res){
   TestimonialData.find()
               .then(function(testimonial){
                   res.send(testimonial);
-              }).error(console.log('No contents'));
+              },error('No content'))
+              
 });
 app.get('*', function(req, res) {
   res.sendFile('./dist/frontend/index.html');
