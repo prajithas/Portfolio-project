@@ -24,6 +24,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/frontend/index.html'));
  });
 // Connecting with server
-app.listen(3000, function(){
-    console.log('listening to port 3000');
+app.listen((process.env.PORT || 5000), function(){
+  console.log('listening to port'+process.env.PORT);
 });
